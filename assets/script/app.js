@@ -12,7 +12,7 @@ const map = new mapboxgl.Map({
   container: "map", // container ID
   center: [0, 0], // starting position [lng, lat]
   style: 'mapbox://styles/mapbox/light-v11',
-  zoom: 12, // starting zoom
+  zoom: 20, // starting zoom
   pitch: 40,
   style: "mapbox://styles/mapbox/navigation-night-v1", // style URL
 });
@@ -122,5 +122,5 @@ function getMyLocation(){
 
 const button = document.getElementById('tracker');
 button.addEventListener('click',getMyLocation)
-zoomIn.addEventListener('click', zoomInMap);
+// zoomIn.addEventListener('click', zoomInMap);
 //-90 to 90 for latitude and -180 to 180 for longitude.
