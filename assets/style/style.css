@@ -71,6 +71,11 @@ nav ul li {
   background-color: #318ce7;
   color: #fff;
   font-weight: 500;
+
+}
+
+#tracker:hover {
+  background-color: #5fa6ec;
 }
 
 .description h2 {
@@ -117,6 +122,9 @@ p {
   border-radius: 5px;
 }
 
+
+
+
 /*------------------------------------------*/
 /*              Footer                      */
 /*------------------------------------------*/
@@ -153,6 +161,9 @@ footer p {
   display: flex;
   justify-content: flex-end;
 }
+
+
+
 
 /*------------------------------------------*/
 /*              Utility                     */
