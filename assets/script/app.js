@@ -1,3 +1,5 @@
+'use strict';
+
 
 //Elements and Variables
 let latitude = 0;
