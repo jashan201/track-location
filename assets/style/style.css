@@ -2,7 +2,7 @@
 @charset "utf-8";
 
 :root{
-  --background-dark: rgb(24,23,32);
+  --background-dark: #181720;
   --font-text: rgb(255, 255, 255);
   --box-width: 360px;
 }
@@ -17,43 +17,38 @@ body {
   background-color: var(--background-dark);
   font-family: "Open Sans", sans-serif,'Arial','Helvetica';
   display: grid;
-  place-items: center;
-
 }
-
-
 
 /*------------------------------------------*/
 /*              Header                      */
 /*------------------------------------------*/
 
 header {
-  display: flex;
-  height: 56px;
-  width: 90%;
-  justify-content: space-between;
-  color: #fff;
-  position: relative;
+  color: var(--font-text);
 }
 
-nav {
+.header-bar{
   display: flex;
-  align-items: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+nav ul {
   gap: 20px;
 }
 
-header nav ul {
-  display: flex;
-  font-size: 20px;
-  gap: 10px;
+nav ul li {
+  line-height: 60px;
+  list-style: none;
+  color: var(--font-color-main);
 }
 
-nav button {
-  height: 40px;
-  width: 70px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #318ce7;
+.landing {
+  background: transparent url(../img/bg3.jpg);
+  background-color: var(--background-color);
+  background-size: cover;
+  z-index: -1;
+  height: 800px;
 }
 
 /*------------------------------------------*/
@@ -66,6 +61,7 @@ nav button {
   align-items: center;
   gap: 10px;
   margin-top: 30px;
+
 }
 
 #tracker {
@@ -118,6 +114,7 @@ p {
 
 .images img {
   width: 250px;
+  border-radius: 5px;
 }
 
 /*------------------------------------------*/
@@ -125,17 +122,18 @@ p {
 /*------------------------------------------*/
 
 footer {
+  background-color: #2e2c3e;
   color: #fff;
-  margin-top: 30px;
-  height: 60px;
-  display: flex;
-  width: 90%;
-  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.contact {
+.footer-bar {
   display: flex;
+  justify-content: space-between;
+  height: 60px;
+  line-height: 60px;
 }
+
 
 .contact h2 {
   font-size: 30px;
@@ -144,8 +142,6 @@ footer {
 #icons {
   gap: 30px;
   display: flex;
-  margin-top: 9px;
-  margin-left: 12px;
 }
 
 #icons a {

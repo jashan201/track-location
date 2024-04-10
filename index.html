@@ -17,19 +17,19 @@
     <script src="./assets/script/app.js" defer></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
-
-
   </head>
   <body>
-    <header>
-      <h1>QuickBite Delivery</h1>
-      <nav>
-        <ul>
-          <l1>About us</l1>
-          <l1>contact</l1>
-        </ul>
-        <button>Login</button>
-      </nav>
+    <header class="landing">
+      <div class ="container header-bar space-between">
+        <h1>QuickBite Delivery</h1>
+        <nav>
+          <ul class="nav flex">
+            <li>About Us</li>
+            <li>Contact</li>
+            <li>Login</li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <div class="container">
@@ -45,21 +45,22 @@
           <h2>Track your order</h2>
           <p>Whether it's one package or multiple shipments, track your orders all
             at once. QuickBite Delivery offers real-time tracking.</p>
-          <button type="button" id="tracker">GET MY LOCATION</button>
+          <button type="button" id="tracker">Track order</button>
         </div>
         <div id="map"></div>
       </div>
     </main>
     <footer>
-      <div class="contact">
-        <h2>contact us for orders:</h2>
-        <section id="icons">
-        <a href="icon"><i class="fa-solid fa-phone"></i></a>
-        <a href="icon"><i class="fa-brands fa-facebook"></i></a>
-        <a href="icon"><i class="fa-solid fa-message"></i></a>
-        </section>
+      <div class="container footer-bar">
+        <div class="contact">
+          <section id="icons">
+            <a href="icon"><i class="fa-solid fa-phone"></i></a>
+            <a href="icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="icon"><i class="fa-solid fa-message"></i></a>
+          </section>
+        </div>
+        <p>&copy; 2024 QuickBite Delivery</p>
       </div>
-      <p>&copy; 2024 QuickBite Delivery</p>
     </footer>
   </body>
 </html>
