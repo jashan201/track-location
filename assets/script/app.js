@@ -5,6 +5,7 @@ let latitude;
 let longitude;
 const marker1 = new mapboxgl.Marker();
 const button = document.getElementById('tracker');
+let connected = false;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2xpbnNraSIsImEiOiJjbHVyZGY2eXYwNjFpMnZuNXRrcGRmcjc3In0.6Qd47pEzatkIT80J1WimVA';
 //Map, id = map
@@ -33,6 +34,7 @@ map.addControl(
 function getCoordinates(position){
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
+  connected = true;
 }
 
 //Update Marker
@@ -46,6 +48,7 @@ function updateMarker(longitude,latitude){
 //The Error Callback function
 function errorHandler(){
   console.log('Unable to retieve location');
+  connected = false;
 }
 
 //Sets maps position and zoom
@@ -53,15 +56,17 @@ function getMyLocation(){
   if (navigator.geolocation){
     //Callback functions
     navigator.geolocation.getCurrentPosition(getCoordinates,errorHandler);
-    map.flyTo({
-      center: [
-         longitude, 
-         latitude 
-      ],
-      essential: true,
-      zoom: 17
-   });
-   updateMarker(longitude,latitude);
+    if(connected){
+      map.flyTo({
+        center: [
+          longitude, 
+          latitude 
+        ],
+        essential: true,
+        zoom: 17
+      });
+      updateMarker(longitude,latitude);
+    }
   }
   else{
     console.log('Geolocation not supported by browser');
